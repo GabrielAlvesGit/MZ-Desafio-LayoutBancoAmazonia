@@ -41,5 +41,4 @@ This project is [MIT License](https://opensource.org/license/MIT) licensed.
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
 
-## 💻 Layout
 
