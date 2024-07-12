@@ -8,7 +8,7 @@
 # Banco Amazonia - MZ Group - Relações com Investidores
 
 <h1 align="center">
-  <a href="http://bancoamazonia.rf.gd/">website view <img src="./img/iconAcimaDireitaBlue.png" alt="Imagem/Icone seta a direita blue" style="width: 20px; height: 20px; margin-left: 5px;"></a>
+  <a href="http://bancoamazonia.rf.gd/">website view <img src="https://github.com/GabrielAlvesGit/Curso-WordPress-Origamid-Handel/blob/main/img/icons/iconAcimaDireitaBlue.png?raw=true" alt="Imagem/Icone seta a direita blue" style="width: 20px; height: 20px; margin-left: 5px;"></a>
 </h1>
 
 ## 📖 Descrição
