@@ -1,0 +1,24 @@
+/*
+Theme Name: Banco Amazônia RI
+Theme URI: http://bancoamazônia.com/
+Author: MZ Group - Gabriel Alves Viana
+Author URI: http://www.mzgroup.com/
+Description: Tema Criado Banco Amazônia RI
+Version: 1.0.0
+*/
+
+/*=============== Imports Scss ===============*/
+@import './base/reset';
+@import './base/grid';
+@import './base/cookies';
+@import './base/variables';
+@import './base/scrollbar';
+@import './global/header';
+@import './global/footer';
+@import './global/scrollAnimations';
+@import './global/scrollup';
+@import './pages/breadcrumbs';
+@import './pages/bannerVideo';
+@import './pages/news';
+@import './pages/contact';
+@import './pages/app';

@@ -1,0 +1,41 @@
+/*=============== Container ===============*/
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*========== Breakpoints ==========*/
+$screen-lg: 992px;
+$screen-md: 768px;
+$screen-sm: 576px;
+$screen-xs: 350px;
+
+/*=============== BREAKPOINTS ===============*/
+@media (min-width: $screen-sm) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: $screen-md) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* For large devices */
+@media (min-width: $screen-lg) {
+  .container {
+    max-width: 960px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1340px;
+  }
+}

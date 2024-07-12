@@ -1,0 +1,56 @@
+/*=============== Video SCSS ===============*/
+.pageHome__banners {
+
+  &.hidden {
+    transform: translateX(0);
+    transition: 1.2s all;
+  }
+
+  &.show-scroll {
+    display: none;
+  }
+
+  .banners {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 62vh;
+    padding-top: 0;
+    background-color: #282b2e;
+
+    .filtro {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(359deg, #1F1F1F -2.47%, rgba(31, 31, 31, 0) 68.89%);
+        z-index: 3;
+      }
+    }
+
+    .banner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .pageHome__banners {
+    .banners {
+      padding-top: 35%;
+    }
+  }
+}

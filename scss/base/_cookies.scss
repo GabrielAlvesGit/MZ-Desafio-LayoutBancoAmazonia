@@ -1,0 +1,390 @@
+/*=============== Cookies ===============*/
+/*==== Cookies Badge ====*/
+.cookiescript__badge {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  left: 10px;
+  bottom: 10px;
+  border-radius: 25px;
+  padding: 3px;
+  transition-duration: 500ms;
+  background-color: var(--secondary-color-dark-green);
+  box-shadow: 1px 2px 8px 0 rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  cursor: pointer;
+  z-index: 99999;
+
+  &:hover .cookiescript__badgetext {
+    max-width: 300px;
+    padding: 0 var(--pd-0-938) 0 var(--pd-0-7-5);
+  }
+
+  >SVG {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cookiescript__badgetext {
+    font-size: var(--normal-font-size);
+    color: var(--primary-color-white);
+    font-weight: var(--font-semi-bold);
+    line-height: 2.5;
+    text-transform: uppercase;
+    white-space: nowrap;
+    max-width: 0;
+    overflow: hidden;
+    transition-duration: 500ms;
+    padding-right: 0;
+  }
+}
+
+/*==== Cookies Injected ====*/
+.cookiescript__injected {
+  position: fixed;
+  display: none;
+  bottom: 20px;
+  left: 20px;
+  width: 300px;
+  max-height: 85%;
+  max-width: calc(100% - 40px);
+  padding: var(--pd-0-938) var(--pd-1-3-0) var(--pd-0-938) var(--pd-1-3-0);
+  border-radius: 10px;
+  background-color: var(--secondary-color-dark-green);
+  box-shadow: 1px 2px 8px 0 rgba(0, 0, 0, 0.35);
+  overflow-y: auto;
+  z-index: 999997;
+  opacity: 1;
+
+  &.active {
+    display: block;
+  }
+
+  .cookiescript__injected__inner {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+
+    .cookiescript__language {
+      display: block;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+
+      >svg {
+        opacity: 0.85;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .cookiescript__close {
+      font-size: var(--forty-font-size);
+      color: var(--primary-color-white);
+      font-weight: 100;
+      opacity: 0.85;
+      line-height: 13px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .cookiescript__injected__content {
+    display: flex;
+    flex-direction: column;
+    margin: var(--mb-0-625) 0 var(--mb-0-625) 0;
+
+    >h4 {
+      color: var(--primary-color-white);
+      font-size: var(--medium-font-size);
+      line-height: 1.3;
+      font-weight: var(--font-semi-bold);
+      letter-spacing: 0.4px;
+      margin-bottom: var(--mb-0-625);
+      opacity: 1;
+    }
+
+    >p,
+    a {
+      color: var(--primary-color-white);
+      font-size: var(--small-font-size12);
+      letter-spacing: 0.3px;
+      line-height: 1.65;
+      font-weight: var(--font-normal);
+      transition: 0.45s all;
+    }
+
+    >a {
+      font-weight: var(--font-bold);
+
+      &:hover {
+        color: var(--secondary-color-yellow-crain);
+        text-decoration: underline;
+        transition: 0.35s all;
+      }
+    }
+  }
+
+  .cookiescript__injected__checkboxs {
+    display: block;
+
+    .cookiescript__checkbox {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .mdc__checkbox {
+        display: block;
+        position: relative;
+        flex: 0 0 18px;
+        box-sizing: content-box;
+        width: 18px;
+        height: 18px;
+        line-height: 0;
+        white-space: nowrap;
+        padding: var(--pd-0-7-5);
+
+        .cookiescript__checkbox__input {
+          position: absolute;
+          display: block;
+          width: 40px;
+          height: 40px;
+          top: 0;
+          right: 0;
+          left: 0;
+          opacity: 0;
+          z-index: 1;
+          cursor: pointer;
+
+          &:not(:checked):focus+.mdc__checkbox__background::before {
+            background-color: var(--primary-color-white);
+            transform: scale(1);
+            opacity: 0.12;
+          }
+
+          &.check__none+.mdc__checkbox__background::before {
+            display: none;
+          }
+        }
+
+        .mdc__checkbox__background {
+          position: absolute;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 18px;
+          height: 18px;
+          border: 2px solid var(--primary-color-white);
+          border-radius: 2px;
+          transition: background-color 90ms 0s cubic-bezier(.4, 0, .6, 1), border-color 90ms 0s cubic-bezier(.4, 0, .6, 1);
+
+          &::before {
+            position: absolute;
+            content: "";
+            top: -13px;
+            left: -13px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            opacity: 0;
+            background-color: var(--secondary-color-sunflower-island);
+            transition: opacity 90ms 0s cubic-bezier(.4, 0, .6, 1), transform 90ms 0s cubic-bezier(.4, 0, .6, 1);
+          }
+
+          .mdc__checkbox__checkmark {
+            opacity: 0;
+            color: var(--secondary-color-dark-green);
+            transition: opacity 180ms 0s cubic-bezier(0, 0, .2, 1), transform 180ms 0s cubic-bezier(0, 0, .2, 1), -webkit-transform 180ms 0s cubic-bezier(0, 0, .2, 1);
+
+            .mdc__checkbox__checkmark__path {
+              stroke: currentColor;
+              stroke-width: 3.12px;
+              stroke-dashoffset: 29.7833385;
+              stroke-dasharray: 29.7833385;
+              transition: stroke-dashoffset 180ms 0s cubic-bezier(.4, 0, .6, 1);
+            }
+          }
+        }
+
+        .cookiescript__checkbox__input:checked~.mdc__checkbox__background::before {
+          transform: scale(1);
+          opacity: 0.12;
+        }
+
+        .cookiescript__checkbox__input:checked~.mdc__checkbox__background .mdc__checkbox__checkmark {
+          opacity: 1;
+        }
+
+        .cookiescript__checkbox__input:checked~.mdc__checkbox__background .mdc__checkbox__checkmark__path {
+          stroke-dashoffset: 0;
+        }
+
+        .cookiescript__checkbox__input:checked~.mdc__checkbox__background {
+          border-color: var(--secondary-color-sunflower-island);
+          background-color: var(--secondary-color-sunflower-island);
+        }
+      }
+
+      .cookiescript_checkbox_label {
+        font-size: var(--small-font-size12);
+        text-transform: uppercase;
+        font-weight: var(--font-semi-bold);
+        color: var(--primary-color-white);
+        letter-spacing: 1px;
+        transition: 0.45s all;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.5;
+          transition: 0.35s all;
+        }
+      }
+    }
+  }
+}
+
+/*==== Cookies BOTÕES ====*/
+.cookiescript__injected__buttons {
+  display: flex;
+
+  >button {
+    flex-grow: 1;
+    padding: 0 var(--pd-0-5);
+    margin: 0 var(--pd-0-3-1-3) var(--pd-0-7-5) var(--pd-0-3-1-3);
+    border-radius: 8px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: 0.45s all;
+  }
+
+  .cookiescript__save {
+    display: none;
+    font-size: var(--small-font-size12);
+    font-weight: var(--font-bold);
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 3.2;
+    letter-spacing: 0.4px;
+    color: var(--primary-color-forest-green);
+    border: none;
+    background-color: var(--secondary-color-sunflower-island);
+
+    &:hover {
+      background-color: var(--secondary-color-yellow-crain);
+    }
+  }
+
+  .cookiescript__accept {
+    font-size: var(--small-font-size12);
+    font-weight: var(--font-bold);
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 3.2;
+    letter-spacing: 0.4px;
+    color: var(--primary-color-forest-green);
+    border: none;
+    background-color: var(--secondary-color-sunflower-island);
+
+    &:hover {
+      background-color: var(--secondary-color-yellow-crain);
+    }
+
+  }
+
+  .cookiescript__reject {
+    font-size: 12px;
+    color: var(--secondary-color-lime-green);
+    line-height: 3;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    text-align: center;
+    border: 1px solid var(--secondary-color-lime-green);
+    background-color: var(--secondary-color-strong-green);
+
+    &:hover {
+      background-color: #26c75d;
+    }
+  }
+}
+
+/*==== Cookies Gerenciar - MOSTRAR DETALHES ====*/
+.cookiescript__manage__wrap {
+  .cookiescript__manage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    >svg {
+      display: block;
+      width: 15px;
+      height: 15px;
+
+      path {
+        fill: var(--primary-color-white);
+        transition: 0.45s all;
+      }
+    }
+
+    &:hover {
+
+      >svg {
+        path {
+          fill: var(--secondary-color-sunflower-island);
+          transition: 0.35s all;
+        }
+      }
+
+      >span {
+        opacity: 1;
+        transition: 0.35s all;
+      }
+    }
+
+    >span {
+      display: block;
+      font-size: var(--small-font-size12);
+      color: var(--primary-color-white);
+      font-weight: var();
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      opacity: 0.85;
+      transition: 0.45s all;
+      cursor: pointer;
+    }
+  }
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices - 1200px */
+@media screen and (max-width: 1200px) {
+
+  /*==== Cookies Injected ====*/
+  .cookiescript__injected {
+    .cookiescript__injected__checkboxs {
+      display: none;
+    }
+  }
+}
+
+/* For large devices - 576px */
+@media screen and (max-width: $screen-sm) {
+
+  /*==== Cookies Injected ====*/
+  .cookiescript__injected {
+    width: 100%;
+    max-width: 100%;
+    padding: var(--pd-0-938);
+    bottom: 0;
+    left: 0;
+    border-radius: 0;
+    overflow: hidden;
+  }
+}

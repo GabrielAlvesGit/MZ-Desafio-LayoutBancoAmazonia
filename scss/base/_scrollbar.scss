@@ -1,0 +1,17 @@
+/* ======= Scroll Styles ======= */
+::-webkit-scrollbar-track {
+  background-color: var(--secondary-color-white);
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color-forest-darke);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color-forest-green);
+}
