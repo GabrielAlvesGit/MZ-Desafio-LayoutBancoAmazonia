@@ -7,10 +7,6 @@
 
 # Banco Amazonia - MZ Group - Relações com Investidores
 
-<h1 align="center">
-  <a href="http://bancoamazonia.rf.gd/">website view <img src="https://github.com/GabrielAlvesGit/Curso-WordPress-Origamid-Handel/blob/main/img/icons/iconAcimaDireitaBlue.png?raw=true" alt="Imagem/Icone seta a direita blue" style="width: 20px; height: 20px; margin-left: 5px;"></a>
-</h1>
-
 ## 📖 Descrição
 **Uso Não-Comercial**
 
@@ -47,4 +43,3 @@ _This README was generated with ❤️ by [readme-md-generator](https://github.c
 
 ## 💻 Layout
 
-![screenshot](https://github.com/user-attachments/assets/44b0d3d7-0384-40f3-9e3f-84f350eeb10c)
